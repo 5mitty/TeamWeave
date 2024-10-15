@@ -26,7 +26,7 @@ const newApp = new App().app;
 newApp.use(express.urlencoded({ extended: false }));
 newApp.use(express.json());
 newApp.listen(port, () => {
-    console.log("Server is running on port 3000");
+    //console.log("Server is running on port 3000");
 });
 // Function to display the main menu
 function mainMenu() {
@@ -101,7 +101,7 @@ async function viewRoles() {
         const result = await pool.query('SELECT r.id, r.title AS Role, r.salary AS Salary, d.name AS Department FROM role r JOIN department d ON r.department_id = d.id');
         // Use console.table to display the roles in a formatted table
         console.table(result.rows);
-        console.log('\n'); // Add a blank line after displaying roles
+        console.log('\n'); // A blank blank line after displaying roles
     }
     catch (err) {
         console.error(chalk.red('Error viewing roles:', err));
@@ -120,7 +120,7 @@ async function viewEmployees() {
         `);
         // Use console.table to display the employees in a formatted table
         console.table(result.rows);
-        console.log('\n'); // Add a blank line after displaying employees
+        console.log('\n'); // A blank line after displaying employees
     }
     catch (err) {
         console.error(chalk.red('Error viewing employees:', err));
@@ -152,7 +152,7 @@ async function addDepartment() {
     catch (err) {
         console.error(chalk.red('Error adding department:', err));
     }
-    console.log('\n'); // Add a blank line after adding a department
+    console.log('\n'); // A blank line after adding a department
     await mainMenu(); // Return to main menu
 }
 async function addRole() {
@@ -197,10 +197,9 @@ async function addRole() {
     catch (err) {
         console.error(chalk.red('Error adding role:', err));
     } //finally {
-    // Close the database connection if necessary
     // pool.end(); // Uncomment if you want to close the pool here
     //}
-    console.log('\n'); // Add a blank line after adding a role
+    console.log('\n'); // A blank line after adding a role
     await mainMenu(); // Return to main menu
 }
 async function addEmployee() {
