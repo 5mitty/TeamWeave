@@ -31,5 +31,5 @@ VALUES ('Arnold', 'Pashwoski', 6, NULL),
        ('Stacy', 'Moctre', 10, 5);
 
 
-SELECT id, name AS Department FROM department
+-- SELECT id, name AS Department FROM department
 
